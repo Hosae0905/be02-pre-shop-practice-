@@ -101,7 +101,7 @@ public class OrderController {
             return ResponseEntity.ok().body("ok");
         } else {
             String token = getToken();
-            paymentCancel(token, impUid, paymentInfo.get("amount"), paymentInfo.get("customData"));
+            paymentCancel(token, impUid, paymentInfo.get("amount"));
 
             return ResponseEntity.badRequest().body("error");
         }
